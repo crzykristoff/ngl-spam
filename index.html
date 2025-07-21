@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NGL Spammer</title>
+<style>
+body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+input, button { margin: 5px; padding: 10px; }
+</style>
+</head>
+<body>
+
+<h2>NGL Spammer</h2>
+
+<form method="post">
+  <label>Your NGL ID (from your link):</label><br>
+  <input type="text" name="ngl_id" placeholder="e.g. kristoffer123" required><br>
+
+  <label>Message to send:</label><br>
+  <input type="text" name="message" placeholder="Your message" required><br>
+
+  <label>How many times:</label><br>
+  <input type="number" name="count" value="5" min="1" required><br>
+
+  <button type="submit">Start Spamming</button>
+</form>
+
+{% if result %}
+  <div style="margin-top:20px; color:green;">
+    {{ result }}
+  </div>
+{% endif %}
+
+</body>
+</html>
